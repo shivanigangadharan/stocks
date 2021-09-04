@@ -13,13 +13,14 @@
     <h1> Stocks Calculator</h1>
     <form>
         <label>Enter old stock price</label>
-        <input required id="oldPrice" type="number">
+        <input required onchange="handleChangeO(this.value)" id="oldPrice" type="number">
         <br/>
         <label>Enter number of stocks purchased</label>
         <input required id="noOfStocks" type="number" />
         <br/>
         <label>Enter current stock price</label>
-        <input required id="newPrice" type="number" />
+        <input required onchange="handleChangeN(this.value)" id="newPrice" type="number" />
+        <br/>
         <button id="submitBtn">Show</button>
     </form>
     <script src="main.js"></script>
