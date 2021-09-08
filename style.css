@@ -1,0 +1,58 @@
+body{
+    display: flex;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 120%;
+}
+.result{
+    width: 500px;
+    margin: 10% 0px 0px 0px;
+    box-shadow: 2px 2px 5px 2px lightgray;
+    padding: 2%;
+    border: 15px solid white;
+    background-image: url('./bullbear.jpg');
+    background-position: center;
+color: white;
+    background-size: cover;
+}
+#resultbg{
+    color: black;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.781);
+line-height: 80px;
+}
+.content{
+    background: rgb(248, 248, 248);
+    margin: 5% 10% 0px 10%;
+    padding: 2%;
+    width: 30vw;
+    box-shadow: 2px 2px 5px 2px lightgray;
+    text-align: center;
+}
+.input{
+outline: none;
+border: none;
+font-family: 'Urbanist', sans-serif;
+border-bottom: 2px solid rgb(7, 53, 7);
+background: none;
+font-size: 120%;
+margin: 3%;
+width: 400px;
+padding: 1%;
+color: rgb(13, 100, 13);
+}
+.button{
+    font-family: 'Urbanist', sans-serif;
+    padding: 10px 30px 10px 30px;
+    background: rgb(13, 100, 13);
+    color: white;
+    border: 1px solid rgb(13, 100, 13);
+    border-radius: 4px;
+    font-size: 100%;
+    margin-top: 30px;
+    outline: none;
+}
+.button:hover{
+    background: rgb(32, 141, 32);
+    transition-duration: 0.5s;
+    cursor: pointer;
+}

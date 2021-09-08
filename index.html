@@ -7,27 +7,34 @@
     <title> Stocks Calculator</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <h1> Stocks Calculator</h1>
-    <form>
-        <label>Enter old stock price</label>
-        <input required onchange="handleChangeO(this.value)" id="oldPrice" type="number">
-        <br/>
-        <label>Enter number of stocks purchased</label>
-        <input required id="noOfStocks" type="number" />
-        <br/>
-        <label>Enter current stock price</label>
-        <input required onchange="handleChangeN(this.value)" id="newPrice" type="number" />
-        <br/>
-        <button id="submitBtn">Show</button>
-    </form>
-    <h2 id="result">
-    </h2>
-    <h3 id="percentage">
+    <div class="content">
+        <h1> Stocks Calculator</h1>
+        <form>
+            <input class="input" placeholder="Old stock price" required onchange="handleChangeO(this.value)" id="oldPrice" type="number">
+            <br/>
+            <input class="input" placeholder="Number of stocks purchased" required id="noOfStocks" type="number" />
+            <br/>
+            <input class="input" placeholder="Current stock price" required onchange="handleChangeN(this.value)" id="newPrice" type="number"
+            />
+            <br/>
+            <button class="button" id="submitBtn">Show</button>
+        </form>
 
-    </h3>
+    </div>
+    <div class="result">
+        <div id="resultbg">
+            <h2 id="result">
+            </h2>
+            <h3 id="percentage">
+            </h3>
+        </div>
+    </div>
     <script src="main.js"></script>
 </body>
 
