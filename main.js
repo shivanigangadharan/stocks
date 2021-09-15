@@ -25,7 +25,7 @@ function showStatus(event) {
     }
     console.log('You made a', oldPrice > newPrice ? 'loss' : 'profit', 'of Rs.', Math.abs((oldPrice * noOfStocks.value) - (newPrice * noOfStocks.value)));
     result.innerText = ("You made a ") + (oldPrice > newPrice ? ' loss ' : 'profit ') + (' of Rs. ') + (Math.abs((oldPrice * noOfStocks.value) - (newPrice * noOfStocks.value)));
-    percentage.innerText = ("The ") + (oldPrice > newPrice ? ' loss ' : 'profit ') + ("percentage is ") + (((Math.abs((oldPrice * noOfStocks.value) - (newPrice * noOfStocks.value))) / oldPrice) * 100) + ("%");
+    percentage.innerText = ("The ") + (oldPrice > newPrice ? ' loss ' : 'profit ') + ("percentage is ") + parseFloat(((Math.abs((oldPrice * noOfStocks.value) - (newPrice * noOfStocks.value))) / oldPrice) * 100).toFixed(2) + ("%");
 }
 
 submitBtn.addEventListener('click', showStatus);
