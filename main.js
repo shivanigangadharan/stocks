@@ -19,13 +19,14 @@ function showStatus(event) {
         alert('Please enter values for all 3 inputs.');
         return 0;
     }
-    if (oldPrice < 0 || newPrice < 0 || noOfStocks < 0) {
+    if (oldPrice < 0 || newPrice < 0 || parseInt(noOfStocks.value) < 0) {
         alert('Please enter valid inputs.');
         return 0;
     }
-    console.log('You made a', oldPrice > newPrice ? 'loss' : 'profit', 'of Rs.', Math.abs((oldPrice * noOfStocks.value) - (newPrice * noOfStocks.value)));
-    result.innerText = ("You made a ") + (oldPrice > newPrice ? ' loss ' : 'profit ') + (' of Rs. ') + (Math.abs((oldPrice * noOfStocks.value) - (newPrice * noOfStocks.value)));
-    percentage.innerText = ("The ") + (oldPrice > newPrice ? ' loss ' : 'profit ') + ("percentage is ") + parseFloat(((Math.abs((oldPrice * noOfStocks.value) - (newPrice * noOfStocks.value))) / oldPrice) * 100).toFixed(2) + ("%");
+    console.log('noofsts = ', typeof (parseInt(noOfStocks.value)));
+    console.log('You made a', oldPrice > newPrice ? 'loss' : 'profit', 'of Rs.', Math.abs((oldPrice * parseInt(noOfStocks.value)) - (newPrice * parseInt(noOfStocks.value))));
+    result.innerText = ("You made a ") + (oldPrice > newPrice ? ' loss ' : 'profit ') + (' of Rs. ') + (Math.abs((oldPrice * parseInt(noOfStocks.value)) - (newPrice * parseInt(noOfStocks.value))));
+    percentage.innerText = ("The ") + (oldPrice > newPrice ? ' loss ' : 'profit ') + ("percentage is ") + parseFloat(((Math.abs((oldPrice * parseInt(noOfStocks.value)) - (newPrice * parseInt(noOfStocks.value)))) / oldPrice) * 100).toFixed(2) + ("%");
 }
 
 submitBtn.addEventListener('click', showStatus);
